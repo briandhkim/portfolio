@@ -303,4 +303,46 @@
 
 	});
 
+	
+
 })(jQuery);
+
+function mailerAjax(){
+	$.ajax({
+		url: 'mail/mail_handler.php',
+		method: 'post',
+		data:{
+			'email': 'test_v1@testemail.com'
+		},
+		success: function(data){
+			console.log(data);
+		},
+		error: function(err){
+			console.log(err);
+		}
+	});
+}
+
+$(document).ready(function(){
+	
+	$('#emailSubmit').click((e)=>{
+		e.preventDefault();
+		const email = $('#email').val();
+		// console.log(email);
+
+		$.ajax({
+			url: 'mail/mail_handler.php',
+			method: 'post',
+			data:{
+				email: email
+			},
+			success: function(){
+
+			},
+			error: function(){
+
+			}
+		});
+	});
+
+});
