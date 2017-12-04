@@ -45,7 +45,7 @@ function submitForm() {
     //     }
     // });
     $.ajax({
-            url: './mail/mail_handler.php',
+            url: '/mail/mail_handler.php',
             method: 'post',
             data:{
                 email: email,
