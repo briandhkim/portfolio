@@ -11,12 +11,12 @@ $output=[
 $message['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 if(empty($message['name'])){
 	$output['success'] = false;
-	$output['messages'][] = 'missing name key';
+	$output['messages'][] = 'missing name';
 }
 $message['email'] = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
 if(empty($message['email'])){
 	$output['success'] = false;
-	$output['messages'][] = 'invalid email key';
+	$output['messages'][] = 'invalid email';
 }
 //Sanitize message field
 $message['message'] = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
@@ -24,7 +24,11 @@ if(empty($message['message'])){
 	$output['success'] = false;
 	$output['messages'][] = 'missing message';
 }
-// $message['subject'] = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+$message['subject'] = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+if(empty($message['subject'])){
+	$output['success'] = false;
+	$output['messages'][] = 'missing subject';
+}
 
 //things received from front end ajax call
 // $_POST('name');
