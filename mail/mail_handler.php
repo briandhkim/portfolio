@@ -43,7 +43,7 @@ if($output['success'] !== null){
 $message['message'] = nl2br($message['message']); //convert newline characters to line break html tags
 
 $mail = new PHPMailer;
-$mail->SMTPDebug = 3;           // Enable verbose debug output. Change to 0 to disable debugging output.
+// $mail->SMTPDebug = 3;           // Enable verbose debug output. Change to 0 to disable debugging output.
 
 $mail->isSMTP();                // Set mailer to use SMTP.
 $mail->Host = 'smtp.gmail.com'; // Specify main and backup SMTP servers.
