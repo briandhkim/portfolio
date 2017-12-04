@@ -312,13 +312,15 @@ function mailerAjax(){
 		url: 'mail/mail_handler.php',
 		method: 'post',
 		data:{
-			'email': 'test_v1@testemail.com'
+			'name': 'collinsbackendcaneatit',
+			'message': 'email message thing',
+			'email': '1@testemail.'
 		},
 		success: function(data){
 			console.log(data);
 		},
 		error: function(err){
-			console.log(err);
+			console.log(err.responseText);
 		}
 	});
 }
@@ -336,11 +338,11 @@ $(document).ready(function(){
 			data:{
 				email: email
 			},
-			success: function(){
-
+			success: function(data){
+				console.log(data);
 			},
-			error: function(){
-
+			error: function(err){
+				console.log(err);
 			}
 		});
 	});
