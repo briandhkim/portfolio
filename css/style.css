@@ -1398,8 +1398,6 @@ ul.social-buttons li a:active {
 }
 #skills .item {
 	text-align: center;
-}
-#skills .item:hover{
     color: white;
     text-shadow: 
         -0.5px -0.5px 0 #000,
