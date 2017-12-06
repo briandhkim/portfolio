@@ -1,9 +1,5 @@
-/*
-Name:Particles - Personal + Agency Template
-Version:1.4
-Author:Denis Samardjiev
-*/
-
+/* font-family: 'Press Start 2P', cursive; 
+    font-family: 'Roboto', sans-serif;  */
 /* =Table of Contents
 --------------------------------------------------------------
 	=Common Styles
@@ -39,7 +35,10 @@ Author:Denis Samardjiev
 */
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:700,400,300,100|Montserrat:400,700);
-
+@font-face{
+    font-family: duckhunt;
+    src: url(../fonts/tictacduck_manaspc.ttf);
+}
 /* =Common Styles
 -------------------------------------------------------------- */
 body {
@@ -1612,6 +1611,17 @@ span.portfolio-hover a {
     font-size: 24px;
     font-weight: 100;
     display: block !important;
+}
+.projCubeTube .project-title{
+    font-family: 'Roboto', sans-serif;
+}
+.projOWarcade .project-title{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 14px;
+}
+.projTTD .project-title{
+    font-family: duckhunt;
+    font-size: 20px;
 }
 
 .portfolio-links {

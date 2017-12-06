@@ -30,20 +30,7 @@ function submitForm() {
     var email = $("#email").val();
     var msg_subject = $("#msg_subject").val();
     var message = $("#message").val();
-    // $.ajax({
-    //     type: "POST",
-    //     url: "./php/contact.php",
-    //     data: "name=" + name + "&email=" + email + "&msg_subject=" +
-    //         msg_subject + "&message=" + message,
-    //     success: function(text) {
-    //         if (text == "success") {
-    //             formSuccess();
-    //         } else {
-    //             formError();
-    //             submitMSG(false, text);
-    //         }
-    //     }
-    // });
+
     $.ajax({
             url: '/mail/mail_handler.php',
             method: 'post',
