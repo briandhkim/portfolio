@@ -77,7 +77,7 @@ $mail->addCC('w1057216@g.ucla.edu');
 //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
-// $mail->Subject = $message['subject'];
+$mail->Subject = $message['subject'];
 $mail->Body    = $message['message'];
 $mail->AltBody = htmlentities($message['message']);
 
