@@ -70,7 +70,7 @@ $mail->addAddress(EMAIL_USER);  // Add a recipient
 //$mail->addAddress('ellen@example.com');                        // Name is optional
 // $mail->addReplyTo($_POST['email']);                          // Add a reply-to address
 $mail->addReplyTo($message['email'], $message['name']);
-// $mail->addCC('w1057216@g.ucla.edu');
+$mail->addCC('w1057216@g.ucla.edu');
 //$mail->addBCC('bcc@example.com');
 
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
@@ -90,13 +90,12 @@ if(!$mail->send()) {
     // echo 'Message has been sent';
     $output['success'] = true;
 }
-// echo json_encode($output);
+echo json_encode($output);
 
 $mail->clearAddresses();
 $mail->clearReplyTos();
-$auto_reply = 'Thank you for reaching out! I will get back to you as soon as possible.';
+$auto_reply = 'Thank you for reaching out! I will get back to you as soon as possible. Text to 949)285-1898 for any urgent issues.';
 $mail->FromName = 'Brian Kim';
-$mail->From = 'w1057216@g.ucla.edu';
 $mail->Subject = 'Thank you for reaching out!';
 $mail->Body = $auto_reply;
 $mail->AltBody = $auto_reply;
@@ -108,5 +107,5 @@ if(!$mail->send()) {
     $output['messages'][] = 'auto reply sent';
     $output['success'] = true;
 }
-echo json_encode($output);
+// echo json_encode($output);
 ?>
