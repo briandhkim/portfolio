@@ -31,8 +31,14 @@ function submitForm() {
     var msg_subject = $("#msg_subject").val();
     var message = $("#message").val();
 
+    let sendIcon = $('<i>',{
+        class: 'fa fa-spinner fa-lg fa-spin fa-fw'
+    }).css('color','white');
+    let sendSpan = $('<span>').addClass('sendingMsg').text(' sending...').prepend(sendIcon);
+    $('#msgSubmit').text('').removeClass();
+    $('#msgSubmit').append(sendSpan);
     $.ajax({
-            url: '/mail/mail_handler.php',
+            url: 'mail/mail_handler.php',
             method: 'post',
             data:{
                 email: email,
@@ -41,21 +47,24 @@ function submitForm() {
                 message: message
             },
             success: function(data){
-                console.log(data);
+                console.log(data);   
                 formSuccess();
             },
             error: function(err){
-                console.log(err);
+                console.log(err.responseText);
+                const errResp = JSON.parse(err.responseText).messages[0];
                 formError();
-                submitMSG(false, 'something went wrong...')
+                submitMSG(false, 'something went wrong... ' + errResp);
             }
         });
 }
 function formSuccess() {
     $("#contactForm")[0].reset();
+    $('.sendingMsg').remove();
     submitMSG(true, "Message Submitted!")
 }
 function formError() {
+    $('.sendingMsg').remove();
     $("#contactForm").removeClass().addClass('shake animated').one(
         'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend',
         function() {
@@ -65,10 +74,16 @@ function formError() {
 function submitMSG(valid, msg) {
     if (valid) {
         var msgClasses = "h4 text-success";
+        var msgIcon = "fa fa-paper-plane-o fa-lg text-info";
     } else {
         var msgClasses = "h4 text-danger";
+        var msgIcon = "fa fa-exclamation-triangle text-danger";
     }
-    $("#msgSubmit").removeClass().addClass(msgClasses).text(msg);
+    const icon = $('<i>',{
+        class: msgIcon,
+        'aria-hidden': true
+    }).css('margin', '0 5px');
+    $("#msgSubmit").removeClass().addClass(msgClasses).text(msg).prepend(icon);
 }
 
 /* ---- our work gallery ---- */
