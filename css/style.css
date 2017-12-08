@@ -77,6 +77,14 @@ a:focus, a:hover {
     color: #8980fe;
     text-decoration: underline;
 }
+#featured h5.heading-1 a, #featured .featImgPop{
+    opacity: 0.7;
+    color: white;
+}
+#featured h5.heading-1 a:hover, #featured h5.heading-1 a:focus, #featured .featImgPop:hover, #featured .featImgPop:focus{
+    text-decoration: none;
+    opacity: 1;
+}
 
 .mini-hr {
     border-style: solid none;
@@ -1341,6 +1349,10 @@ ul.social-buttons li a:active {
 }
 .logo-about img{
     width: 44px;
+    opacity: 0.7;
+}
+.logo-about img:hover, .logo-about img:focus{
+    opacity: 1;
 }
 
 /* =Profile
@@ -1363,17 +1375,22 @@ ul.social-buttons li a:active {
     font-size: 14px;
     border-bottom:1px solid #2D2D2D;
 }
-.profile-box ul li i{
-    margin: 0 10px;
+.profile-box ul li .fa-file-pdf-o{
+    margin: 0 7px;
+}
+.profile-box ul li:last-child a{
+    margin: 0 7px;
 }
 .profile-box ul li .fa-github-square{
     color: rgba(8, 8, 8, 0.8);
+    font-size: 1.5em;
 }
 .profile-box ul li .fa-github-square:hover{
     color: rgba(8, 8, 8, 1);
 }
 .profile-box ul li .fa-linkedin-square{
     color: rgba(0, 119, 181, 0.7);
+    font-size: 1.5em;
 }
 .profile-box ul li .fa-linkedin-square:hover{
     color: rgba(0, 119, 181, 1);
