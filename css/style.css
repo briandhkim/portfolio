@@ -39,6 +39,14 @@
     font-family: duckhunt;
     src: url(../fonts/tictacduck_manaspc.ttf);
 }
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: rgba(230,230,230, 0.8);
+}
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: rgb(30,30,30);
+}
 /* =Common Styles
 -------------------------------------------------------------- */
 body {
@@ -1374,9 +1382,19 @@ ul.social-buttons li a:active {
     padding:5px 0;
     font-size: 14px;
     border-bottom:1px solid #2D2D2D;
+    color: #d3d3d3;
+}
+.profile-box ul li a{
+    text-decoration: none;
+    color: #d3d3d3;
+    opacity: 0.5;
+}
+.profile-box ul li a:hover, .profile-box ul li a:focus{
+    opacity: 1;
 }
 .profile-box ul li .fa-file-pdf-o{
     margin: 0 7px;
+    color: red;
 }
 .profile-box ul li:last-child a{
     margin: 0 7px;
@@ -1904,6 +1922,10 @@ span.portfolio-hover a {
 
 /* =Contact + Map
 -------------------------------------------------------------- */
+#contact .section-title .fa-child{
+    font-size: 18px;
+    vertical-align: baseline;
+}
 #contact .form-control {
     padding: 0;
     background-color: transparent;
