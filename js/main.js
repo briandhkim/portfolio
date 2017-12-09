@@ -74,7 +74,8 @@ function formError() {
 function submitMSG(valid, msg) {
     if (valid) {
         var msgClasses = "h4 text-success";
-        var msgIcon = "fa fa-paper-plane-o fa-lg text-info";
+        // var msgIcon = "fa fa-paper-plane-o fa-lg text-info";
+        var msgIcon = 'fa fa-child fa-lg text-info';
     } else {
         var msgClasses = "h4 text-danger";
         var msgIcon = "fa fa-exclamation-triangle text-danger";
