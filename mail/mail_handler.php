@@ -95,7 +95,7 @@ echo json_encode($output);
 $mail->clearAddresses();
 $mail->clearReplyTos();
 $mail->clearCCs();
-$auto_reply = 'Thank you for reaching out! I will get back to you as soon as possible. Text to 949)285-1898 for any urgent issues.';
+$auto_reply = "Hello! Thank you for reaching out! I will get back to you as soon as possible. \n Text to 949)285-1898 for any urgent issues. You can also email to w1057216@g.ucla.edu. \n Thank you";
 $mail->FromName = 'Brian Kim';
 $mail->Subject = 'Thank you for reaching out!';
 $mail->Body = $auto_reply;
