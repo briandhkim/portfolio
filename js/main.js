@@ -32,7 +32,7 @@ function submitForm() {
     var message = $("#message").val();
 
     let sendIcon = $('<i>',{
-        class: 'fa fa-spinner fa-lg fa-spin fa-fw'
+        class: 'fa fa-spinner fa-lg fa-spin fa-fw text-warning'
     }).css('color','white');
     let sendSpan = $('<span>').addClass('sendingMsg').text(' sending...').prepend(sendIcon);
     $('#msgSubmit').text('').removeClass();
