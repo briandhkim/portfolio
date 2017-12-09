@@ -62,10 +62,8 @@ $options = array(
     )
 );
 $mail->smtpConnect($options);
-// $mail->From = $_POST['email'];  // sender's email address (shows in "From" field)
-$mail->From = $message['email'];
-// $mail->FromName = 'collins backend can eat it';   // sender's name (shows in "From" field)
-$mail->FromName = $message['name'];
+$mail->From = $message['email'];        // sender's email address (shows in "From" field)
+$mail->FromName = $message['name'];     // sender's name (shows in "From" field)
 $mail->addAddress(EMAIL_USER);  // Add a recipient
 //$mail->addAddress('ellen@example.com');                        // Name is optional
 // $mail->addReplyTo($_POST['email']);                          // Add a reply-to address
@@ -95,7 +93,7 @@ echo json_encode($output);
 $mail->clearAddresses();
 $mail->clearReplyTos();
 $mail->clearCCs();
-$auto_reply = "Hello! Thank you for reaching out! I will get back to you as soon as possible. \n Text to 949)285-1898 for any urgent issues. You can also email to w1057216@g.ucla.edu. \n Thank you";
+$auto_reply = "Hello! Thank you for reaching out! I will get back to you as soon as possible. \r Text to 949)285-1898 for any urgent issues.";
 $mail->FromName = 'Brian Kim';
 $mail->Subject = 'Thank you for reaching out!';
 $mail->Body = $auto_reply;
