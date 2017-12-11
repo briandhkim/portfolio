@@ -1439,6 +1439,7 @@ ul.social-buttons li a:active {
         -0.5px -0.5px 0 #000,
         0.5px 0.5px 0 #000,
         0.75px 0.75px 0 #000;
+    font-size: 16px;
 }
 
 #skills .item > .circle-hold {
@@ -1451,7 +1452,14 @@ ul.social-buttons li a:active {
     background-color: #8980FE;
     border-radius: 50%;
 }
-
+#skills .item > .circle-hold.postman img{
+    height: 90%;
+}
+#skills .item > .circle-hold.meistertask img, #skills .item > .circle-hold.react img{
+    height: 80%;
+    top: 10%;
+    position: relative;
+}
 #skills .item > .circle-hold > i {
 	color: #fff;
     display: block;
