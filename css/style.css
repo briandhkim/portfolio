@@ -1376,6 +1376,7 @@ ul.social-buttons li a:active {
 .profile-box strong {
 	color: #fff;
 	font-size: 16px;
+    font-weight: 500;
 }
 
 .profile-box ul li{
