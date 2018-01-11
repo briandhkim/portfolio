@@ -153,8 +153,15 @@ button:hover,
     -moz-transition: margin-top 0.5s ease-in-out;
     -o-transition: margin-top 0.5s ease-in-out;
     transition: margin-top 0.5s ease-in-out;
+    font-weight: bolder;
 }
-
+#scaleReveal p{
+    font-weight: bolder;
+    font-size: 23px;
+}
+.ion-mouse, .ion-android-arrow-down{
+    font-size: 24px;
+}
 .big-logo {
     font-size: 70px;
 }
@@ -238,6 +245,10 @@ button:hover,
 .footer-padding {
     padding-top: 60px;
     padding-bottom: 60px;
+}
+
+.footer-padding a:hover, .footer-padding a:focus{
+    text-decoration: none;
 }
 
 /* =Typography
@@ -1053,7 +1064,7 @@ ul.social-buttons li a:active {
 
 .jumbotron.jumbotron-main a {
     color: #fff;
-    opacity: 0.65;
+    opacity: 0.45;
 }
 .jumbotron.jumbotron-main a:hover{opacity:1;}
 
@@ -1388,10 +1399,13 @@ ul.social-buttons li a:active {
 .profile-box ul li a{
     text-decoration: none;
     color: #d3d3d3;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
 }
-.profile-box ul li a:hover, .profile-box ul li a:focus{
-    opacity: 1;
+.profile-box ul li:nth-of-type(3) a:hover, .profile-box ul li:nth-of-type(3) a:focus{
+    color: red;
+}
+.profile-box ul li:nth-of-type(4) a:hover, .profile-box ul li:nth-of-type(4) a:focus{
+    color: #00e5ff;
 }
 .profile-box ul li .fa-file-pdf-o{
     margin: 0 7px;
@@ -1937,7 +1951,8 @@ span.portfolio-hover a {
 }
 #contact .form-control {
     padding: 0;
-    background-color: transparent;
+    /*background-color: transparent;*/
+    background-color: rgba(230,230,230, 0.05);
     color: #a1a1a1;
     font-size: 14px;
     font-weight: 400;
