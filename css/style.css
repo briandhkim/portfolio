@@ -219,6 +219,8 @@ button:hover,
 .mb90 { margin-bottom:90px !important; }
 .mb100 { margin-bottom:100px !important; }
 
+.ml5  { margin-left: 5px }
+.mr5  { margin-right: 5px }
 .ml30 { margin-left: 30px }
 .mr30 { margin-right: 30px }
 .ml15 { margin-left: 15px }
@@ -1375,7 +1377,27 @@ ul.social-buttons li a:active {
 .logo-about img:hover, .logo-about img:focus{
     opacity: 1;
 }
-
+#about-carousel .carousel-control{
+    color: rgba(255,255,255,0.5);
+}
+#about-carousel .carousel-control:hover{
+    color: rgba(255,255,255,1);
+}
+#featured .carousel-links a{
+    color: rgba(52,152,219,0.55);
+}
+#featured .carousel-links a:hover, #featured .carousel-links a:focus{
+    color: rgba(52,152,219,1);
+    text-decoration: none;
+}
+#featured .carousel-links .fa-github-square,
+#featured .carousel-links .fa-desktop{
+    color: rgba(255,255,255,0.55);
+}
+#featured .carousel-links .fa-github-square:hover, #featured .carousel-links .fa-github-square:focus,
+#featured .carousel-links .fa-desktop:hover, #featured .carousel-links .fa-desktop:focus{
+    color: rgba(255,255,255,1);
+}
 /* =Profile
 -------------------------------------------------------------- */
 .profile-box {
