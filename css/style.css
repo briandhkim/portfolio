@@ -85,11 +85,13 @@ a:focus, a:hover {
     color: #8980fe;
     text-decoration: underline;
 }
-#featured h5.heading-1 a, #featured .featImgPop{
+#featured h5.heading-1 a, #featured .featImgPop, #featured p>a{
     opacity: 0.7;
     color: white;
 }
-#featured h5.heading-1 a:hover, #featured h5.heading-1 a:focus, #featured .featImgPop:hover, #featured .featImgPop:focus{
+#featured h5.heading-1 a:hover, #featured h5.heading-1 a:focus, 
+#featured .featImgPop:hover, #featured .featImgPop:focus,
+#featured p>a:hover, #featured p>a:focus{
     text-decoration: none;
     opacity: 1;
 }
