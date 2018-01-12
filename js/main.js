@@ -18,7 +18,40 @@ $('.process-box').hover(function() {
 $("#contactForm").validator().on("submit", function(event) {
     if (event.isDefaultPrevented()) {
         formError();
-        submitMSG(false, "Did you fill in the form properly?");
+        let submitMsg = 'Did you fill in the form properly?';
+
+        let msg_subject = $("#msg_subject").val().trim();
+        let name = $("#name").val().trim();
+        let message = $("#message").val().trim();
+        var email = $("#email").val().trim();
+
+        const emailReg = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,3}$/;
+        if(!emailReg.test(email)){
+            submitMsg = 'Please check your email';
+        }
+
+        let subjectErr = false;
+        let nameErr = false;
+        let messageErr = false;
+
+        const regex = /[\w\d\s\W]+/;
+        if(!regex.test(msg_subject)){
+            submitMsg = 'Please check the message subject';
+            subjectErr = true;
+        }
+        if(!regex.test(name)){
+            submitMsg = 'Please check your name input';
+            nameErr = true;
+        }
+        if(!regex.test(message)){
+            submitMsg = 'Please check your message';
+            messageErr = true;
+        }
+        
+        if(subjectErr && nameErr && messageErr){
+            submitMsg = 'Please check the subject, name, and message';
+        }
+        submitMSG(false, submitMsg);
     } else {
         event.preventDefault();
         submitForm();
@@ -26,10 +59,16 @@ $("#contactForm").validator().on("submit", function(event) {
 });
 function submitForm() {
     // Initiate Variables With Form Content
-    var name = $("#name").val();
-    var email = $("#email").val();
-    var msg_subject = $("#msg_subject").val();
-    var message = $("#message").val();
+    var name = $("#name").val().trim();
+    var email = $("#email").val().trim();
+    var msg_subject = $("#msg_subject").val().trim();
+    var message = $("#message").val().trim();
+
+    const emailReg = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,3}$/;
+    if(!emailReg.test(email)){
+        submitMSG(false, 'Please check your email');
+        return;
+    }
 
     let sendIcon = $('<i>',{
         class: 'fa fa-spinner fa-lg fa-spin fa-fw text-warning'
