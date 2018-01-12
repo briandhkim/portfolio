@@ -25,15 +25,16 @@ $("#contactForm").validator().on("submit", function(event) {
         let message = $("#message").val().trim();
         var email = $("#email").val().trim();
 
-        const emailReg = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,12}$/;
-        if(!emailReg.test(email)){
-            submitMsg = 'Please check your email';
-        }
-
         let subjectErr = false;
         let nameErr = false;
         let messageErr = false;
+        let emailErr = false;
 
+        const emailReg = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,12}$/;
+        if(!emailReg.test(email)){
+            submitMsg = 'Please check your email';
+            emailErr = true;
+        }
         const regex = /[\w\d\s]+/;
         const regexMsg = /[\w\d]+/;
         if(!regex.test(msg_subject)){
@@ -49,7 +50,7 @@ $("#contactForm").validator().on("submit", function(event) {
             messageErr = true;
         }
         
-        if(subjectErr + nameErr + messageErr > 1){
+        if(emailErr + subjectErr + nameErr + messageErr > 1){
             submitMsg = 'Please check your form';
         }
         submitMSG(false, submitMsg);
