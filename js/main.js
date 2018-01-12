@@ -64,11 +64,11 @@ function submitForm() {
     var msg_subject = $("#msg_subject").val().trim();
     var message = $("#message").val().trim();
 
-    const emailReg = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,3}$/;
-    if(!emailReg.test(email)){
-        submitMSG(false, 'Please check your email');
-        return;
-    }
+    // const emailReg = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,3}$/;
+    // if(!emailReg.test(email)){
+    //     submitMSG(false, 'Please check your email');
+    //     return;
+    // }
 
     let sendIcon = $('<i>',{
         class: 'fa fa-spinner fa-lg fa-spin fa-fw text-warning'
