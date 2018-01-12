@@ -30,7 +30,7 @@ $("#contactForm").validator().on("submit", function(event) {
         let messageErr = false;
         let emailErr = false;
 
-        const emailReg = /[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,12}$/;
+        const emailReg = /^[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,12}$/;
         if(!emailReg.test(email)){
             submitMsg = 'Please check your email';
             emailErr = true;
@@ -45,7 +45,7 @@ $("#contactForm").validator().on("submit", function(event) {
             submitMsg = 'Please check your name input';
             nameErr = true;
         }
-        if(!regexMsg.test(message)){
+        if(!regex.test(message)){
             submitMsg = 'Please check your message';
             messageErr = true;
         }
