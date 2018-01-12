@@ -35,6 +35,7 @@ $("#contactForm").validator().on("submit", function(event) {
         let messageErr = false;
 
         const regex = /[\w\d\s]+/;
+        const regexMsg = /[\w\d]+/;
         if(!regex.test(msg_subject)){
             submitMsg = 'Please check the message subject';
             subjectErr = true;
@@ -43,13 +44,13 @@ $("#contactForm").validator().on("submit", function(event) {
             submitMsg = 'Please check your name input';
             nameErr = true;
         }
-        if(!regex.test(message)){
+        if(!regexMsg.test(message)){
             submitMsg = 'Please check your message';
             messageErr = true;
         }
         
-        if(subjectErr && nameErr && messageErr){
-            submitMsg = 'Please check the subject, name, and message';
+        if(subjectErr + nameErr + messageErr > 1){
+            submitMsg = 'Please check your form';
         }
         submitMSG(false, submitMsg);
     } else {
