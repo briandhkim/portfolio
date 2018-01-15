@@ -20,39 +20,39 @@ $("#contactForm").validator().on("submit", function(event) {
         formError();
         let submitMsg = 'Did you fill in the form properly?';
 
-        let msg_subject = $("#msg_subject").val().trim();
-        let name = $("#name").val().trim();
-        let message = $("#message").val().trim();
-        var email = $("#email").val().trim();
+        // let msg_subject = $("#msg_subject").val().trim();
+        // let name = $("#name").val().trim();
+        // let message = $("#message").val().trim();
+        // var email = $("#email").val().trim();
 
-        let subjectErr = false;
-        let nameErr = false;
-        let messageErr = false;
-        let emailErr = false;
+        // let subjectErr = false;
+        // let nameErr = false;
+        // let messageErr = false;
+        // let emailErr = false;
 
-        const emailReg = /^[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,12}$/;
-        if(!emailReg.test(email)){
-            submitMsg = 'Please check your email';
-            emailErr = true;
-        }
-        const regex = /[\w\d\s]+/;
-        const regexMsg = /[\w\d]+/;
-        if(!regex.test(msg_subject)){
-            submitMsg = 'Please check the message subject';
-            subjectErr = true;
-        }
-        if(!regex.test(name)){
-            submitMsg = 'Please check your name input';
-            nameErr = true;
-        }
-        if(!regex.test(message)){
-            submitMsg = 'Please check your message';
-            messageErr = true;
-        }
+        // const emailReg = /^[A-z0-9._%+-]+@[A-z0-9.-]+\.[a-z]{2,12}$/;
+        // if(!emailReg.test(email)){
+        //     submitMsg = 'Please check your email';
+        //     emailErr = true;
+        // }
+        // const regex = /[\w\s]+/;
+        // const regexMsg = /[\w\s]+/;
+        // if(!regex.test(msg_subject)){
+        //     submitMsg = 'Please check the message subject';
+        //     subjectErr = true;
+        // }
+        // if(!regex.test(name)){
+        //     submitMsg = 'Please check your name input';
+        //     nameErr = true;
+        // }
+        // if(!regex.test(message)){
+        //     submitMsg = 'Please check your message';
+        //     messageErr = true;
+        // }
         
-        if(emailErr + subjectErr + nameErr + messageErr > 1){
-            submitMsg = 'Please check your form';
-        }
+        // if(emailErr + subjectErr + nameErr + messageErr > 1){
+        //     submitMsg = 'Please check your form';
+        // }
         submitMSG(false, submitMsg);
     } else {
         event.preventDefault();

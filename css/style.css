@@ -1378,7 +1378,7 @@ ul.social-buttons li a:active {
     opacity: 1;
 }
 #about-carousel .carousel-control{
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.2);
 }
 #about-carousel .carousel-control:hover{
     color: rgba(255,255,255,1);
