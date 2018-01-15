@@ -88,7 +88,7 @@ function submitForm() {
                 message: message
             },
             success: function(data){
-                console.log(data);   
+                // console.log(data);   
                 formSuccess();
             },
             error: function(err){
