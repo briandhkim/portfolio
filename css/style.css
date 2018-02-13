@@ -1663,7 +1663,8 @@ span.portfolio-hover {
 }
 
 .portfolio-image-holder:before {
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    /*border: 1px solid rgba(255, 255, 255, 0.14);*/
+    border: 1px solid rgba(255, 255, 255, 0.24);
     content: "";
     position: absolute;
     top: 12px;
