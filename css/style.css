@@ -2187,7 +2187,8 @@ footer hr {
 
 body {
     background-color: #f5f5f5;
-    color: #7B7B7B;
+    /*color: #7B7B7B;*/
+    color: #434343;
 }
 
 .section-title h2 {
