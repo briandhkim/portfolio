@@ -1472,6 +1472,9 @@ ul.social-buttons li a:active {
         0.75px 0.75px 0 #000;*/
     color: white;
 }
+#skills .section-title .section-divider{
+    background-color: white;
+}
 #skills .section-title p{
     text-shadow: 
         -0.5px -0.5px 0 #000,
@@ -1497,6 +1500,7 @@ ul.social-buttons li a:active {
     height: 110px;
     background-color: #8980FE;
     border-radius: 50%;
+    border: 1px solid black;
 }
 #skills .item > .circle-hold.postman img{
     height: 90%;
